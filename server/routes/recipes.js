@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-router.get("/api/", (request, response) => {
-    return response.status(200).json({message: 'hello world'});
-});
+const RecipeController = require('../controllers/recipeController');
+
+router.get("/api/", RecipeController.recipes_get_all);
 
 module.exports = router;
