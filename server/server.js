@@ -6,13 +6,13 @@ const bodyParser = require('body-parser');
 const app = express();
 const router = express.Router();
 
+// local imports
+const RecipeRoute = require('./routes/recipes');
 // initialize app
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-router.get("/api/", (request, response) => {
-    return response.status(200).json({message: 'hello world'});
-});
+app.use("/", RecipeRoute);
 
 module.exports = app;
