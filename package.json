@@ -4,7 +4,9 @@
   "description": "recipe app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon bin/www",
+    "dev": "concurrently \"npm run server\""
   },
   "author": "Martin Ben",
   "license": "ISC",
@@ -17,6 +19,7 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
+    "concurrently": "^4.1.0",
     "mocha": "^6.1.4",
     "nodemon": "^1.19.0"
   }

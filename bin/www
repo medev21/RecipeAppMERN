@@ -4,5 +4,5 @@ const port = process.env.PORT || 5001;
 
 //listening on port
 app.listen(port, function(){
-    console.log('server started' + port);
+    console.log('server started ' + port);
 });

@@ -11,7 +11,7 @@ app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-router.get("/", (request, response) => {
+router.get("/api/", (request, response) => {
     return response.status(200).json({message: 'hello world'});
 });
 
