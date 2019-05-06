@@ -4,10 +4,10 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const app = express();
-const router = express.Router();
 
 // local imports
 const RecipeRoute = require('./routes/recipes');
+
 // initialize app
 app.use(morgan("dev"));
 app.use(bodyParser.json());
